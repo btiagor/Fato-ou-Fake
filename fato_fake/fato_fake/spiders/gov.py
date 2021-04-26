@@ -22,7 +22,7 @@ class GovSpider(scrapy.Spider):
             my_datatime = div.xpath('.//li/text()').extract()
             _, date, hour, _ = my_datatime
             # print(date, hour)
-            print(my_datatime)
+            # print(my_datatime)
             yield {
                   'title': title,
                   'href': href,
@@ -31,3 +31,7 @@ class GovSpider(scrapy.Spider):
                   'date': date,
                   'hour': hour
             }
+        btn_proximo = response.xpath('//li[contains(@class, "pagination-next")]/a/@href').extract_first()
+        # print('AQUIIIIIIIIIIIIIIIIII ',btn_proximo)
+        if btn_proximo:
+            yield scrapy.Request(url=f'https://antigo.saude.gov.br/{btn_proximo}', callback=self.parse)

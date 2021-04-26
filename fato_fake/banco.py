@@ -42,6 +42,6 @@ def crud(query, item={}):
     close_conection(my_conn)
     
 
-# create_database()
+create_database()
 # crud('insert into fatos(fat_title, fat_url, fat_img, fat_date, fat_hour) values("Teste SQLITE", "https://github.com/btiagor/Fato-ou-Fake", "img text", "21/04/2021", "20:57")')
-# print('select * from fatos')
+print(crud('select count(*) from fatos'))
