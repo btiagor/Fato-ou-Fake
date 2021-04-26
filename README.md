@@ -39,7 +39,9 @@ $ pip3 install scrapy
 $ scrapy startproject fato_ou_fake
 ```
 * Com isso é criado uma pasta chamada fato_ou_fake no diretório atual com essa estrutura:
+
 ![Tree Project](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/tree_project.png)
+
 * Essa é a estrutura básica gerada pelo Scrapy.
 
 ## Web Crawler
