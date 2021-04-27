@@ -74,10 +74,15 @@ $ scrapy crawl aosfatos
 ![Criando Tabela](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/criando%20banco.png)
 
 > Linha 1: Importando Sqlite que é nativo no Python
+
 > Linha 2: Nome do nosso Banco
+
 > Linha 3: Criando uma conexão com o nosso banco, caso ele não exista é criado.
+
 > Linha 5: Fazemos uma validação de segurança para checar se nossa tabela já existe no banco.
+
 > Linha 8 à 19: Campos que iremos criar.
+
 > Linha 21: Fechando a conexão com o banco.
 
 ## Item Pipeline
@@ -102,10 +107,15 @@ ITEM_PIPELINES = {
 * Após criação editamos para que ele fique dessa forma.
 ![Modelo Scraping](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/scraping.png)
 > Linha 8: Domínio do site
+
 > Linha 9: URL inicial da pesquisa 
+
 > Linha 11: Outra forma de limitar o tempo entre as requisições
-> Linha 15: Regras para fazer a pesquisa, o **allow=noticias** será nossa base de pesquisa, toda URL da página que contiver o **noticias** ira ser lida, **callback=parse_news** é nossa função de extração de links e por fim **follow=True** informa que devemos seguir o sistes dado match pelo **LinkExtractor**
+
+> Linha 15: Regras para fazer a pesquisa, o **allow=noticias** será nossa base de pesquisa, toda URL da página que contiver o **noticias** ira ser lida, **callback=parse_news** é nossa função de extração de links e por fim **follow=True** informa que devemos seguir o sites dado match pelo **LinkExtractor**
+
 > Linha 21: Nosso retorno da função contendo o link encontrado
+
 * Com edição feita basta executar dessa forma.
 ```python
  $ scrapy crawl aosfatos_scraping -o links_aosfatos.json
