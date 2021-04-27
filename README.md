@@ -113,6 +113,29 @@ ITEM_PIPELINES = {
 * A novidade desse comando é que estamos escrevendo um arquivo de saída no formato JSON
 
 
+## Analisando Dados Obtidos
+* Para essa análise utilizei as duas bases geradas que estão no projeto, talvez distorça da minha análise quando for fazer por causa do surgimento de novos dados.
+* Utilizei a propria plataforma do [Sqlite Online] para gerar os gráficos.
+### Base GOV
+* Quantitativo de FAKENEWS por ano.
+![Total FAKE por Ano](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/total_ocorrencias_ano_gov.png)
+* Quantitativo de assuntos por ano.
+![Quantitativo Assuntos por Ano](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/assuntos_ano.png)
+
+### Base AosFatos
+* Como a base do AosFatos nos traz mais dados conseguimos gerar mais estudo sobre os dados.
+* O site tem tipos de classificação sobre as matérias. Ex: Distorcido ou Falso
+* Para pegar essa informação na base utilizei o FAT_IMG que é uma imagem padrão das notícias e que representa essa classificação.
+![Total Classificação](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/tipos_aosfatos.png)
+* Podemos ver essa classificação por ano.
+![Total Classificação por Ano](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/qtd_tipos_aosfatos.png)
+* Podemos focar em uma determinada classificação, abaixo temos o quantitativo de FakeNews por Ano. O gráfico mostra uma tendência de subida para esse determinado tipo de notícia.
+![Total FakeNews por Ano](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/fake_ano.png)
+
+## Integração das bases
+* O script é simples e está bem comentado, checa elemento por elemento se já existe na nova base caso não exista insere. Esse procedimento é realizado para ambas base **aosfatos.db** e **gov.db**. Com essa integração da para fazer comparativos entre os portais.
+![Comparativo entre total de FakeNews entre os portais](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/integracao.png)
+
 ## Deploy
 * Para fazer o deploy do nosso projeto utilizamos o Scrapy Cloud que tem uma conta Free básica
 * Primeiro você faz sua conta neste [site], pode utilizar conta do Github também.
@@ -122,17 +145,18 @@ ITEM_PIPELINES = {
 * Após instalar o shub e fazer login, basta fazer o deploy da sua spyder e aguardar finalizar o comando.
 > $ shub deploy 521171
 
-![Resultado](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/zyte deploy.png)
+![Resultado](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/zyte_deploy.png)
 
 * No menu Dashboard temos a lista de nossas spyders e informações de sobre a execução delas.
 
-![Menu Dashboard](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/menu dashboard.png)
+![Menu Dashboard](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/menu_dashboard.png)
 
 * Agora basta selecionar uma spyder e clicar em **RUN** botão no canto superior direito.
 
  
-## Conclusão
-* Esse projeto foi de grande aprendizado....
+## Trabalhos Futuros
+* Utilizar outras portais
+* Checar com ajuda de Machine Learning se ambos os portais estão com o resultado para uma mesma matéria aumentando a veracidade da resposta.
 
 ## Versão
 
