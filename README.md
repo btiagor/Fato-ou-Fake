@@ -21,6 +21,7 @@ Aqui estão as tecnologias utilizadas no projeto
 * Github
 * Dillinger
 * Sqlite Online
+* Scrapy Cloud
 
 ## Como Utilizar 
 Caso não tenha o Python instalado em sua máquina, por favor consulte a documentação [aqui], caso já o tenha é interessante criar um ambiente virtual para não atrapalhar seus outros projetos, para isto utilizei o [Venv].
@@ -112,6 +113,27 @@ ITEM_PIPELINES = {
 * A novidade desse comando é que estamos escrevendo um arquivo de saída no formato JSON
 
 
+## Deploy
+* Para fazer o deploy do nosso projeto utilizamos o Scrapy Cloud que tem uma conta Free básica
+* Primeiro você faz sua conta neste [site], pode utilizar conta do Github também.
+* Após fazer sua conta basta criar um novo projeto e dar um nome para ele e nos deparamos com a imagem abaixo:
+![Deploy Management](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/zyte.png)
+* Você pode escolher fazer deploy via Github ou computador, no nosso caso vamos utilizar o computador.
+* Após instalar o shub e fazer login, basta fazer o deploy da sua spyder e aguardar finalizar o comando.
+> $ shub deploy 521171
+
+![Resultado](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/zyte deploy.png)
+
+* No menu Dashboard temos a lista de nossas spyders e informações de sobre a execução delas.
+
+![Menu Dashboard](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/menu dashboard.png)
+
+* Agora basta selecionar uma spyder e clicar em **RUN** botão no canto superior direito.
+
+ 
+## Conclusão
+* Esse projeto foi de grande aprendizado....
+
 ## Versão
 
 1.0.0.0
@@ -126,7 +148,7 @@ ITEM_PIPELINES = {
 * **[Venv]**
 * **[Sqlite]**
 * **[Sqlite Online]**
-
+* **[Entendendo Zyte]**
 Qualquer dúvida ou sugestões pode entrar em contato, estou a disposição.
 
 [//]: # (Estes são so links utilizados no corpo desse note e os sites de refeência para produzir o conteúdo.)
@@ -136,3 +158,5 @@ Qualquer dúvida ou sugestões pode entrar em contato, estou a disposição.
 [Sqlite]: <https://www.sqlitetutorial.net/>
 [Scrapy]: <https://www.tutorialspoint.com/scrapy/index.htm>
 [Sqlite Online]: <https://sqliteonline.com/>
+[site]: <https://app.scrapinghub.com/account/login/>
+[Entendendo Zyte]: <https://medium.com/data-hackers/introdu%C3%A7%C3%A3o-e-primeiros-passos-no-scrapy-cloud-dd88cce23c93>
