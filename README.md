@@ -23,7 +23,7 @@ Aqui estão as tecnologias utilizadas no projeto
 * Sqlite Online
 * Scrapy Cloud
 
-## Como Utilizar 
+## Como Utilizar
 Caso não tenha o Python instalado em sua máquina, por favor consulte a documentação [aqui], caso já o tenha é interessante criar um ambiente virtual para não atrapalhar seus outros projetos, para isto utilizei o [Venv].
 
 Com todo seu ambiente configurado vamos dar início.
