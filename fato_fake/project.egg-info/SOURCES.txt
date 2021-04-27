@@ -1,0 +1,14 @@
+setup.py
+fato_fake/__init__.py
+fato_fake/items.py
+fato_fake/middlewares.py
+fato_fake/pipelines.py
+fato_fake/settings.py
+fato_fake/spiders/__init__.py
+fato_fake/spiders/aosfatos.py
+fato_fake/spiders/gov.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
