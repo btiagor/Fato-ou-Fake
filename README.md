@@ -149,6 +149,7 @@ ITEM_PIPELINES = {
 * **[Sqlite]**
 * **[Sqlite Online]**
 * **[Entendendo Zyte]**
+
 Qualquer dúvida ou sugestões pode entrar em contato, estou a disposição.
 
 [//]: # (Estes são so links utilizados no corpo desse note e os sites de refeência para produzir o conteúdo.)
