@@ -52,7 +52,7 @@ $ scrapy startproject fato_ou_fake
 ```
 * Esse comando irá criar um arquivo chamado aosfatos.py no diretório spiders do nosso projeto com esse formato.
 ![Model Spyderr](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/modelo_spider.png)
-* Com auxílio do seu editor favorito altere o código para está forma e salve.
+* Com auxílio do seu editor favorito altere o código para esta forma e salve.
 ```python
 start_urls = ['https://www.aosfatos.org/noticias']
 
@@ -67,7 +67,7 @@ $ scrapy crawl aosfatos
 * Caso encontre o erro abaixo, que foi o nosso caso, quer dizer que o site não tem o arquivo robots.txt, arquivo de configuração onde sites podem colocar restrições para bots. Para resolver esse problema vamos no arquivo settings.py que fica localizado na raiz do nosso projeto e alterar a linha ROBOTSTXT_OBEY para False, por default ela vem True.
 ![Erro Falta do robot.txt](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/erro%20301.png) 
 * Como uma boa prática é necessário limitar a velocidade com que o Scrapy faz requisições. Dependendo da quantidade de requisições feitas você pode congestionar o servidor target, então alteramos mais uma propriedade no settings.py DOWNLOAD_DELAY = 3 (por padrão ela está comentada). Esse valor é referente ao tempo em segundos entre as requisições, deixaremos ele em 1.5 para nosso teste.
-* Depois das auterações execute o comando anterior novamente e deve receber uma resposta positiva.
+* Depois das alterações execute o comando anterior novamente e deve receber uma resposta positiva.
 * A versão final dessa spyder está comentada e completa no projeto.
 * Para persistir os dados utilizamos o [Sqlite].
 
@@ -114,7 +114,7 @@ ITEM_PIPELINES = {
 
 
 ## Analisando Dados Obtidos
-* Para essa análise utilizei as duas bases geradas que estão no projeto, talvez distorça da minha análise quando for fazer por causa do surgimento de novos dados.
+* Para essa análise utilizei as duas bases geradas que estão no projeto, talvez a sua análise distorça da minha por causa do surgimento de novos dados.
 * Utilizei a propria plataforma do [Sqlite Online] para gerar os gráficos.
 ### Base GOV
 * Quantitativo de FAKENEWS por ano.
@@ -133,7 +133,7 @@ ITEM_PIPELINES = {
 ![Total FakeNews por Ano](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/fake_ano.png)
 
 ## Integração das bases
-* O script é simples e está bem comentado, checa elemento por elemento se já existe na nova base caso não exista insere. Esse procedimento é realizado para ambas base **aosfatos.db** e **gov.db**. Com essa integração da para fazer comparativos entre os portais.
+* O script é simples e está bem comentado, checa cada elemento se já existe na base integracao caso não exista insere. Esse procedimento é realizado para ambas base **aosfatos.db** e **gov.db**. Com essa integração da para fazer comparativos entre os portais.
 ![Comparativo entre total de FakeNews entre os portais](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/integracao.png)
 
 ## Deploy
@@ -147,7 +147,7 @@ ITEM_PIPELINES = {
 
 ![Resultado](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/zyte_deploy.png)
 
-* No menu Dashboard temos a lista de nossas spyders e informações de sobre a execução delas.
+* No menu Dashboard temos a lista de nossas spyders e informações sobre a execução delas.
 
 ![Menu Dashboard](https://github.com/btiagor/Fato-ou-Fake/blob/master/fato_fake/fato_fake/readme_imagens/menu_dashboard.png)
 
